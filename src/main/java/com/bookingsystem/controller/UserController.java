@@ -4,13 +4,12 @@ import com.bookingsystem.model.User;
 import com.bookingsystem.service.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.HashMap;
+import java.util.List;
 
 @RestController
 @RequestMapping("/users")
-@Service
 public class UserController {
+    
     private final UserService userService;
 
     public UserController(UserService userService) {
@@ -23,22 +22,22 @@ public class UserController {
     }
 
     @GetMapping("/")
-    public HashMap<Integer, User> getAll() {
+    public List<User> getAll() {
         return userService.findAll();
     }
 
     @GetMapping("/{id}")
-    public User getUser(@PathVariable int id) {
+    public User getUser(@PathVariable String id) {
         return userService.findById(id);
     }
 
     @PutMapping("/{id}")
-    public User updateUser(@PathVariable int id, @RequestBody User user) {
+    public User updateUser(@PathVariable String id, @RequestBody User user) {
         return userService.updateById(id, user);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteUser(@PathVariable int id) {
+    public void deleteUser(@PathVariable String id) {
         userService.deleteById(id);
     }
 }
