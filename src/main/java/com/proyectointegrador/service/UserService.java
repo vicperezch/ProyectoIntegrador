@@ -1,7 +1,7 @@
-package com.bookingsystem.service;
+package com.proyectointegrador.service;
 
-import com.bookingsystem.model.User;
-import com.bookingsystem.repository.UserRepository;
+import com.proyectointegrador.model.User;
+import com.proyectointegrador.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
@@ -23,7 +23,6 @@ public class UserService {
 
         if (user.isPresent()) {
             return user.get();
-
         }
 
         return null;

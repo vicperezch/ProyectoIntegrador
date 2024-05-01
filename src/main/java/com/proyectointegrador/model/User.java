@@ -1,4 +1,4 @@
-package com.bookingsystem.model;
+package com.proyectointegrador.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
@@ -20,7 +20,6 @@ public class User {
         this.name = name;
         this.email = email;
         this.password = password;
-
     }
 
     // Getters y setters

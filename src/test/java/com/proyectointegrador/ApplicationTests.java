@@ -1,4 +1,4 @@
-package com.bookingsystem;
+package com.proyectointegrador;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

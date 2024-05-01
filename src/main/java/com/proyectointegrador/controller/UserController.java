@@ -1,15 +1,13 @@
-package com.bookingsystem.controller;
+package com.proyectointegrador.controller;
 
-import com.bookingsystem.model.User;
-import com.bookingsystem.service.UserService;
-import org.springframework.stereotype.Service;
+import com.proyectointegrador.model.User;
+import com.proyectointegrador.service.UserService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    
     private final UserService userService;
 
     public UserController(UserService userService) {

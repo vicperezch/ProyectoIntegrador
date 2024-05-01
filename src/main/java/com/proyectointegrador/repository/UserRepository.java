@@ -1,9 +1,10 @@
-package com.bookingsystem.repository;
+package com.proyectointegrador.repository;
 
-import com.bookingsystem.model.User;
+import com.proyectointegrador.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserRepository extends MongoRepository<User, String> {
+
 }
