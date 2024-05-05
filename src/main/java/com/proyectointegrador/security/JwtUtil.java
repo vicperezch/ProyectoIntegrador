@@ -16,7 +16,7 @@ import java.util.function.Function;
 
 @Component
 public class JwtUtil {
-    private final String encryptionKey = "W4LnKFMcCh2Kse4yvrpI11jyMyFLZ99u";
+    private final String encryptionKey = "fqW/GlN2gp+nmylMZWs6aS7pBFhfWpdgO1CTrMjWoNScMfUjGz5JBqQJI2EMxzFK\n";
 
     public String extractEmail(String token) {
         return extractClaim(token, Claims::getSubject);
