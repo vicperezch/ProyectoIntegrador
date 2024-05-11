@@ -19,11 +19,9 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true)
 public class SecurityConfiguration {
     private final JwtRequestFilter jwtRequestFilter;
-    private final UserDetailsServiceImpl userDetailsService;
 
-    public SecurityConfiguration(JwtRequestFilter jwtRequestFilter, UserDetailsServiceImpl userDetailsService) {
+    public SecurityConfiguration(JwtRequestFilter jwtRequestFilter) {
         this.jwtRequestFilter = jwtRequestFilter;
-        this.userDetailsService = userDetailsService;
     }
 
     @Bean

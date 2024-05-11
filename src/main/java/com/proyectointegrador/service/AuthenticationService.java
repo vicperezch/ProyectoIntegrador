@@ -33,6 +33,10 @@ public class AuthenticationService {
         String encodedPassword = passwordEncoder.encode(registerDto.getPassword());
         User user = new User(registerDto.getName(), registerDto.getEmail(), encodedPassword, String.valueOf(Role.USER));
 
+        if (userRepository.existsByEmail(user.getEmail())) {
+            throw new IllegalArgumentException("User already exists");
+        }
+
         userRepository.save(user);
         return jwtUtil.generateToken(UserDetailsImpl.build(user), Role.USER);
     }
